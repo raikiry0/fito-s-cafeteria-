@@ -151,16 +151,24 @@
     transition:max-height .38s ease, opacity .3s ease, margin-top .3s ease;
     opacity:0;
   }
-  .tag.open .tag-panel{max-height:260px;opacity:1;margin-top:16px;}
+  .tag.open .tag-panel{max-height:560px;opacity:1;margin-top:16px;}
   .tag-panel-inner{border-top:1px dashed var(--line);padding-top:14px;}
   .tag-panel p{margin:0 0 10px;font-size:0.92rem;color:var(--navy-soft);line-height:1.5;}
   .extras{display:flex;flex-wrap:wrap;gap:8px;}
+  .extras + .extras-label{margin-top:14px;}
   .extras span{
     font-size:0.78rem;font-weight:600;color:var(--navy);
     background:rgba(233,176,78,0.24);border:1px solid rgba(29,44,78,0.15);
     padding:5px 11px;border-radius:100px;
   }
   .extras-label{font-size:0.72rem;text-transform:uppercase;letter-spacing:1px;font-weight:700;color:var(--coral-dark);margin-bottom:8px;display:block;}
+  .tag-note{font-size:0.78rem;font-style:italic;color:var(--navy-soft);opacity:0.85;margin:10px 0 0;}
+  .menu-subhead{
+    font-family:'Baloo 2';font-weight:700;font-size:1.15rem;color:var(--navy);
+    margin:44px 0 18px;display:flex;align-items:center;gap:10px;
+  }
+  .menu-subhead:first-of-type{margin-top:0;}
+  .menu-subhead::after{content:"";flex:1;height:2px;background:var(--line);}
 
   /* ---------- ABOUT STRIP ---------- */
   .strip{
@@ -262,11 +270,88 @@
 <section class="section" id="menu">
   <div class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Nuestros favoritos</span>
+      <span class="eyebrow">Nuestra carta</span>
       <h2>Tocá cada tarjeta para ver más</h2>
-      <p>Rolls, cookies, tortas, salados y café — hacé clic y descubrí qué le podés agregar a cada uno.</p>
+      <p>Café, bebidas frías, pastelería y salados — hacé clic y descubrí las variedades de cada uno.</p>
     </div>
 
+    <h3 class="menu-subhead">☕ Bebidas calientes</h3>
+    <div class="menu-grid">
+
+      <!-- CAFE CALIENTE -->
+      <div class="tag" data-tag>
+        <div class="tag-top" data-toggle>
+          <div class="tag-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="#1D2C4E" stroke-width="2.4" stroke-linecap="round">
+              <path d="M16 28 h26 v12 a13 13 0 0 1-13 13 h0 a13 13 0 0 1-13-13 Z"/>
+              <path d="M42 30 h6 a5 5 0 0 1 0 10 h-6"/>
+              <path d="M23 16 q3 4 0 7 M31 14 q3 4 0 7"/>
+            </svg>
+          </div>
+          <div class="tag-name">
+            <h3>Café caliente</h3>
+            <span class="price-hint">Espresso, cortado, latte</span>
+          </div>
+          <div class="chevron"><svg viewBox="0 0 12 8" fill="none" stroke="#1D2C4E" stroke-width="2"><path d="M1 1l5 5 5-5"/></svg></div>
+        </div>
+        <div class="tag-panel">
+          <div class="tag-panel-inner">
+            <p>Espresso, cortado, latte o capuccino: el cafecito de todos los días, como más te guste.</p>
+            <span class="extras-label">Nuestras variedades</span>
+            <div class="extras">
+              <span>Cortado doble</span><span>Lágrima doble</span><span>Café doble</span><span>Café en jarrita</span><span>Lágrima en jarrito</span><span>Expresso</span><span>Café Fito's (con Nutella)</span><span>Cappuccino</span><span>Chocolate caliente</span><span>Chocolate con malvaviscos</span><span>Té</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h3 class="menu-subhead">🧊 Bebidas frías</h3>
+    <div class="menu-grid">
+
+      <!-- BEBIDAS FRIAS -->
+      <div class="tag" data-tag>
+        <div class="tag-top" data-toggle>
+          <div class="tag-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="#1D2C4E" stroke-width="2.4" stroke-linecap="round">
+              <path d="M20 16 h24 l-3 34 a3 3 0 0 1-3 3 H26 a3 3 0 0 1-3-3 Z"/>
+              <path d="M18 16 h28"/>
+              <path d="M35 12 v8 M35 12 q6 0 6 6"/>
+            </svg>
+          </div>
+          <div class="tag-name">
+            <h3>Bebidas frías</h3>
+            <span class="price-hint">Iced coffee, licuados y más</span>
+          </div>
+          <div class="chevron"><svg viewBox="0 0 12 8" fill="none" stroke="#1D2C4E" stroke-width="2"><path d="M1 1l5 5 5-5"/></svg></div>
+        </div>
+        <div class="tag-panel">
+          <div class="tag-panel-inner">
+            <p>Para los días de calor: cafés helados, limonadas, licuados y smoothies bien fresquitos.</p>
+            <span class="extras-label">Iced Coffee</span>
+            <div class="extras">
+              <span>Nutella</span><span>Dulce de leche</span><span>Frutos rojos</span><span>Clásico</span>
+            </div>
+            <span class="extras-label">Limonada</span>
+            <div class="extras">
+              <span>Jengibre y menta</span><span>Frutos rojos</span>
+            </div>
+            <span class="extras-label">Licuados y Smoothies (agua o leche)</span>
+            <div class="extras">
+              <span>Banana</span><span>Frambuesa</span><span>Frutos rojos</span><span>Frutilla</span>
+            </div>
+            <span class="extras-label">Otras frías</span>
+            <div class="extras">
+              <span>Chocolatada fría</span><span>Coffee tonic con naranja</span><span>Pepsi</span><span>7up</span><span>Agua sin gas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h3 class="menu-subhead">🥐 Pastelería</h3>
     <div class="menu-grid">
 
       <!-- ROLL DE CANELA -->
@@ -289,10 +374,11 @@
         <div class="tag-panel">
           <div class="tag-panel-inner">
             <p>Masa enrollada bien esponjosa con relleno de canela y un glaseado suave por encima. El clásico que no falla.</p>
-            <span class="extras-label">Se le puede agregar</span>
+            <span class="extras-label">Toppings a elección</span>
             <div class="extras">
-              <span>Dulce de leche</span><span>Nuez</span><span>Glaseado extra</span><span>Crema</span>
+              <span>Nueces</span><span>Pistachos</span><span>Oreos</span><span>Nutella</span><span>Frutos rojos</span>
             </div>
+            <p class="tag-note">Consultar por ediciones especiales.</p>
           </div>
         </div>
       </div>
@@ -318,15 +404,16 @@
         <div class="tag-panel">
           <div class="tag-panel-inner">
             <p>Cookies bien grandes, crocantes en el borde y tiernas en el centro, cargadas de chips de chocolate.</p>
-            <span class="extras-label">Se le puede agregar</span>
+            <span class="extras-label">Variedades</span>
             <div class="extras">
-              <span>Nutella</span><span>Dulce de leche</span><span>Chips extra</span><span>Helado</span>
+              <span>Red velvet</span><span>Chips de chocolate</span><span>Nutella</span><span>Pistacho y chocolate blanco</span>
             </div>
+            <p class="tag-note">Consultar ediciones especiales.</p>
           </div>
         </div>
       </div>
 
-      <!-- TORTA -->
+      <!-- POSTRES CUCHAREABLES -->
       <div class="tag" data-tag>
         <div class="tag-top" data-toggle>
           <div class="tag-icon">
@@ -337,23 +424,56 @@
             </svg>
           </div>
           <div class="tag-name">
-            <h3>Torta del día</h3>
-            <span class="price-hint">Cambia cada semana</span>
+            <h3>Postres cucharables</h3>
+            <span class="price-hint">De cuchara y bien generosos</span>
           </div>
           <div class="chevron"><svg viewBox="0 0 12 8" fill="none" stroke="#1D2C4E" stroke-width="2"><path d="M1 1l5 5 5-5"/></svg></div>
         </div>
         <div class="tag-panel">
           <div class="tag-panel-inner">
-            <p>Porción de torta casera, húmeda y generosa. La receta rota según lo que salió del horno esa semana.</p>
-            <span class="extras-label">Se le puede agregar</span>
+            <p>Postres de cuchara bien generosos, para los días de antojo dulce.</p>
+            <span class="extras-label">Sabores</span>
             <div class="extras">
-              <span>Porción doble</span><span>Crema</span><span>Frosting extra</span>
+              <span>Choctorta</span><span>Red velvet</span><span>Tiramisú</span><span>Oreo</span>
+            </div>
+            <p class="tag-note">Consultar ediciones especiales.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ALFAJORES Y BUDINES -->
+      <div class="tag" data-tag>
+        <div class="tag-top" data-toggle>
+          <div class="tag-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="#1D2C4E" stroke-width="2.4" stroke-linecap="round">
+              <ellipse cx="32" cy="24" rx="16" ry="7"/>
+              <ellipse cx="32" cy="40" rx="16" ry="7"/>
+              <path d="M16 24 v16 M48 24 v16"/>
+            </svg>
+          </div>
+          <div class="tag-name">
+            <h3>Alfajores & budines</h3>
+            <span class="price-hint">Para llevar</span>
+          </div>
+          <div class="chevron"><svg viewBox="0 0 12 8" fill="none" stroke="#1D2C4E" stroke-width="2"><path d="M1 1l5 5 5-5"/></svg></div>
+        </div>
+        <div class="tag-panel">
+          <div class="tag-panel-inner">
+            <p>Para acompañar el café o llevarte algo dulce a tu casa.</p>
+            <span class="extras-label">Opciones</span>
+            <div class="extras">
+              <span>Alfajor de maicena</span><span>Alfajor artesanal</span><span>Budines caseros</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- SALADOS -->
+    </div>
+
+    <h3 class="menu-subhead">🥪 Salados</h3>
+    <div class="menu-grid">
+
+      <!-- TOSTADO -->
       <div class="tag" data-tag>
         <div class="tag-top" data-toggle>
           <div class="tag-icon">
@@ -364,45 +484,91 @@
             </svg>
           </div>
           <div class="tag-name">
-            <h3>Salados</h3>
-            <span class="price-hint">Tostados & sándwiches</span>
+            <h3>Tostado jamón y queso</h3>
+            <span class="price-hint">En pan de miga</span>
           </div>
           <div class="chevron"><svg viewBox="0 0 12 8" fill="none" stroke="#1D2C4E" stroke-width="2"><path d="M1 1l5 5 5-5"/></svg></div>
         </div>
         <div class="tag-panel">
           <div class="tag-panel-inner">
-            <p>Tostados y sándwiches con pan casero, ideales para acompañar el café con algo más contundente.</p>
-            <span class="extras-label">Se le puede agregar</span>
+            <p>Tostado clásico de jamón y queso hecho en pan de miga, calentito y crocante.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCON -->
+      <div class="tag" data-tag>
+        <div class="tag-top" data-toggle>
+          <div class="tag-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="#1D2C4E" stroke-width="2.4" stroke-linecap="round">
+              <path d="M32 14 L50 44 H14 Z"/>
+              <circle cx="32" cy="34" r="2" fill="#1D2C4E"/>
+              <circle cx="26" cy="38" r="2" fill="#1D2C4E"/>
+              <circle cx="38" cy="38" r="2" fill="#1D2C4E"/>
+            </svg>
+          </div>
+          <div class="tag-name">
+            <h3>Scón de queso</h3>
+            <span class="price-hint">Con harina 0000 y 4 quesos</span>
+          </div>
+          <div class="chevron"><svg viewBox="0 0 12 8" fill="none" stroke="#1D2C4E" stroke-width="2"><path d="M1 1l5 5 5-5"/></svg></div>
+        </div>
+        <div class="tag-panel">
+          <div class="tag-panel-inner">
+            <p>Scón casero hecho con harina 0000 y una mezcla de 4 quesos. Solo o armado en sándwich.</p>
+            <span class="extras-label">Opciones</span>
             <div class="extras">
-              <span>Jamón y queso extra</span><span>Huevo</span><span>Palta</span>
+              <span>Solo</span><span>Con jamón y queso</span><span>Con lomito y cheddar</span>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- CAFE -->
+      <!-- MEGA CHIPA -->
       <div class="tag" data-tag>
         <div class="tag-top" data-toggle>
           <div class="tag-icon">
             <svg viewBox="0 0 64 64" fill="none" stroke="#1D2C4E" stroke-width="2.4" stroke-linecap="round">
-              <path d="M16 28 h26 v12 a13 13 0 0 1-13 13 h0 a13 13 0 0 1-13-13 Z"/>
-              <path d="M42 30 h6 a5 5 0 0 1 0 10 h-6"/>
-              <path d="M23 16 q3 4 0 7 M31 14 q3 4 0 7"/>
+              <circle cx="32" cy="32" r="18"/>
+              <circle cx="32" cy="32" r="7"/>
             </svg>
           </div>
           <div class="tag-name">
-            <h3>Café de especialidad</h3>
-            <span class="price-hint">Espresso, cortado, latte</span>
+            <h3>Mega chipa</h3>
+            <span class="price-hint">Harina de mandioca y 4 quesos</span>
           </div>
           <div class="chevron"><svg viewBox="0 0 12 8" fill="none" stroke="#1D2C4E" stroke-width="2"><path d="M1 1l5 5 5-5"/></svg></div>
         </div>
         <div class="tag-panel">
           <div class="tag-panel-inner">
-            <p>Espresso, cortado, latte o capuccino: el cafecito de todos los días, como más te guste.</p>
-            <span class="extras-label">Se le puede agregar</span>
+            <p>Chipa grande hecha con harina de mandioca y una mezcla de 4 quesos. Sola o armada en sándwich.</p>
+            <span class="extras-label">Opciones</span>
             <div class="extras">
-              <span>Leche de almendras</span><span>Shot extra</span><span>Vainilla</span><span>Caramelo</span>
+              <span>Sola</span><span>Con jamón y queso</span><span>Con lomito y cheddar</span>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AVOCADO TOAST -->
+      <div class="tag" data-tag>
+        <div class="tag-top" data-toggle>
+          <div class="tag-icon">
+            <svg viewBox="0 0 64 64" fill="none" stroke="#1D2C4E" stroke-width="2.4" stroke-linecap="round">
+              <ellipse cx="32" cy="32" rx="17" ry="13"/>
+              <ellipse cx="32" cy="32" rx="7" ry="6"/>
+              <path d="M15 28 h34 M15 36 h34"/>
+            </svg>
+          </div>
+          <div class="tag-name">
+            <h3>Avocado toast</h3>
+            <span class="price-hint">Fresco y saludable</span>
+          </div>
+          <div class="chevron"><svg viewBox="0 0 12 8" fill="none" stroke="#1D2C4E" stroke-width="2"><path d="M1 1l5 5 5-5"/></svg></div>
+        </div>
+        <div class="tag-panel">
+          <div class="tag-panel-inner">
+            <p>Tostada con queso crema, palta y huevo revuelto. Fresca, simple y rendidora.</p>
           </div>
         </div>
       </div>
